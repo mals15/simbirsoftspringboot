@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SimbirSoftTest</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" >
+    <!-- Bootstrap JS + Popper JS -->
+    <script defer src="../static/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+<h1>Result</h1>
+<!--
+<p th:text="'id:' + ${urlAdress.id}"/>
+<p th:text="'adress:' + ${urlAdress.adress}"/>
+<a href="/">Submit another message</a>
+-->
+<!--<div th:each="Word : ${jsoupClass}">
+    <a th:text="${Word.count}">user</a>
+    <a th:text="${Word.word}">user</a>
+
+</div>
+-->
+<a href="/">Вернуться и попробовать еще раз</a>
+<p th:text="'userName: ' + ${requestUrlAddress.userName}"/>
+<p th:text="'Date: ' + ${requestUrlAddress.timeDate}"/>
+<table class="table-success" >
+    <thead>
+    <tr class="table table-success table-striped">
+        <th scope="col">Слово</th>
+        <th scope="col">Кол-во</th>
+    </tr>
+    </thead>
+    <tbody th:each="Word : ${jsoupClass}">
+    <tr class="table table-success table-striped">
+        <td th:text="${Word.word}">Mark</td>
+        <td th:text="${Word.count}">Otto</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
